@@ -3,70 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume Website</title>
+    <title>Kakooza Mahad | Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">KM</div>
+                <button class="toggle-menu"><i class="fas fa-bars"></i></button>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
-    <!-- Add more sections here -->
-    <section id="about">
-        <h1>Mahad Kakooza</h1>
-        <p>Software Engineer | Change-Maker | Innovator</p>
-        <p>I specialize in using technology to solve healthcare challenges. Passionate about AI, software development, and empowering communities.</p>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Django</li>
-            <li>AI & Machine Learning</li>
-            <li>Project Management</li>
-        </ul>
-    </section>
-    
-    <section id="experience">
-        <h2>Experience</h2>
-        <div>
-            <h3>Trainer - Code Academy Uganda</h3>
-            <p>July 2022 - November 2023</p>
-            <p>Facilitated robotics workshops and guided students in building innovative projects.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div>
-            <h3>AI Air Quality monitor</h3>
-            <p>A portable, non-invasive device for Air Quality analysis using AI and machine learning, providing real-time results without need of weather stations .</p>
-        </div>
-        <div>
-            <h3>Agric-Bot</h3>
-            <p>An AI and machine learning Agricultural project that's projects to maximuse agricultural outputs and ensure high quality produce.</p>
+    <section id="about" class="hero">
+        <div class="container">
+            <h1>Kakooza Mahad</h1>
+            <h2>Software Engineer & AI Enthusiast</h2>
+            <p>I build innovative solutions that bridge technology and social impact, specializing in AI/ML applications for agriculture and healthcare.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/kakooza-mahad-a67981317" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/dahamkakooza" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:mahadkakooza6@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </section>
     
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:k.mahad@alustudent.com">k.mahad@alustudent.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/MahadKakooza">MahadKakooza</a></p>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Flask</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AI/ML</h3>
+                    <ul>
+                        <li>TensorFlow</li>
+                        <li>Scikit-learn</li>
+                        <li>NLP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>AWS</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-       
+    
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Code Trainee</h3>
+                <p class="company">Code Academy Uganda | Jan 2023 - Jan 2024</p>
+                <ul>
+                    <li>Trained 100+ students in Python programming fundamentals</li>
+                    <li>Developed curriculum materials that reduced training costs by 30%</li>
+                    <li>Mentored 5 junior trainers in effective teaching methodologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>AgroGram</h3>
+                    <p class="tech-stack">Python | Machine Learning | Flask</p>
+                    <p>AI-powered agricultural assistant helping farmers optimize crop production and marketplace decisions</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Mental Health Platform</h3>
+                    <p class="tech-stack">React | Firebase | Node.js</p>
+                    <p>Community support system offering mental health resources and counseling access</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>AI Air Quality Monitor</h3>
+                    <p class="tech-stack">IoT | Python | Data Analysis</p>
+                    <p>Portable device for real-time air quality analysis using machine learning</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Software Engineering</h3>
+                <p class="institution">African Leadership University (Expected 2025)</p>
+                <p>Relevant coursework: Machine Learning, Data Structures, Web Development</p>
+            </div>
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>IBM Machine Learning Professional Certificate</li>
+                    <li>Google Data Analytics Professional Certificate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> mahadkakooza6@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +256 789 398015</p>
+                <p><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
     
     <footer>
-        <p>&copy; 2024 Mahad Kakooza</p>
+        <div class="container">
+            <p>&copy; 2024 Kakooza Mahad. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="scripts.js"></script>
