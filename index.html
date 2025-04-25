@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kakooza Mahad | Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,13 +29,18 @@
     
     <section id="about" class="hero">
         <div class="container">
-            <h1>Kakooza Mahad</h1>
-            <h2>Software Engineer & AI Enthusiast</h2>
-            <p>I build innovative solutions that bridge technology and social impact, specializing in AI/ML applications for agriculture and healthcare.</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/kakooza-mahad-a67981317" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/dahamkakooza" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:mahadkakooza6@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Kakooza Mahad" class="profile-pic">
+                <div class="profile-text">
+                    <h1>Kakooza Mahad</h1>
+                    <h2>Software Engineer & AI Enthusiast</h2>
+                    <p>I build innovative solutions that bridge technology and social impact, specializing in AI/ML applications for agriculture and healthcare.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/kakooza-mahad-a67981317" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/dahamkakooza" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:mahadkakooza6@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -60,6 +67,7 @@
                 </div>
                 <div class="skill-category">
                     <h3>AI/ML</h3>
+                    <div class="ai-ml-bg"></div>
                     <ul>
                         <li>TensorFlow</li>
                         <li>Scikit-learn</li>
@@ -96,24 +104,39 @@
     <section id="projects" class="section">
         <div class="container">
             <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>AgroGram</h3>
-                    <p class="tech-stack">Python | Machine Learning | Django</p>
-                    <p>AI-powered agricultural assistant helping farmers optimize crop production and marketplace decisions</p>
-                    <a href="#" class="btn">View Project</a>
+            <div class="projects-slider">
+                <div class="project-slide">
+                    <div class="project-image">
+                        <img src="project1.jpg" alt="AgroGram Project">
+                    </div>
+                    <div class="project-details">
+                        <h3>AgroGram</h3>
+                        <p class="tech-stack">Python | Machine Learning | Django</p>
+                        <p>AI-powered agricultural assistant helping farmers optimize crop production and marketplace decisions</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Mental Health Platform</h3>
-                    <p class="tech-stack">React | Postgre SQL | Flask</p>
-                    <p>Community support system offering mental health resources and counseling access</p>
-                    <a href="#" class="btn">View Project</a>
+                <div class="project-slide">
+                    <div class="project-image">
+                        <img src="project2.jpg" alt="Mental Health Platform">
+                    </div>
+                    <div class="project-details">
+                        <h3>Mental Health Platform</h3>
+                        <p class="tech-stack">React | PostgreSQL | Flask</p>
+                        <p>Community support system offering mental health resources and counseling access</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>AI Air Quality Monitor</h3>
-                    <p class="tech-stack">IoT | Python | Data Analysis</p>
-                    <p>Portable device for real-time air quality analysis using machine learning</p>
-                    <a href="#" class="btn">View Project</a>
+                <div class="project-slide">
+                    <div class="project-image">
+                        <img src="project3.jpg" alt="AI Air Quality Monitor">
+                    </div>
+                    <div class="project-details">
+                        <h3>AI Air Quality Monitor</h3>
+                        <p class="tech-stack">IoT | Python | Data Analysis</p>
+                        <p>Portable device for real-time air quality analysis using machine learning</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,6 +183,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
