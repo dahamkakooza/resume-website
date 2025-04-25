@@ -38,9 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Initialize project slider
+    $('.projects-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true
+    });
+    
     // Animation on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.skill-category, .project-card, .experience-item');
+        const elements = document.querySelectorAll('.skill-category, .project-slide, .experience-item');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -54,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Set initial state for animation
-    document.querySelectorAll('.skill-category, .project-card, .experience-item').forEach(element => {
+    document.querySelectorAll('.skill-category, .project-slide, .experience-item').forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.5s, transform 0.5s';
