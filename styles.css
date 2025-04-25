@@ -89,6 +89,28 @@ nav ul li a:hover {
     padding-top: 80px;
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.profile-text {
+    max-width: 600px;
+}
+
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
@@ -155,20 +177,37 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-category:hover {
     transform: translateY(-10px);
 }
 
+.ai-ml-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('ai-ml-bg.jpg') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
 .skill-category h3 {
     color: var(--primary-color);
     margin-bottom: 20px;
     font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .skill-category ul {
     list-style: none;
+    position: relative;
+    z-index: 1;
 }
 
 .skill-category ul li {
@@ -198,22 +237,35 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.projects-slider {
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
-.project-card {
+.project-slide {
+    display: flex !important;
+    align-items: center;
     background: white;
-    padding: 30px;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    margin: 0 15px;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
+.project-image {
+    flex: 1;
+    min-height: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    flex: 1;
+    padding: 30px;
 }
 
 .tech-stack {
@@ -272,6 +324,20 @@ footer {
     padding: 30px 0;
 }
 
+/* Slick slider custom styles */
+.slick-prev:before, 
+.slick-next:before {
+    color: var(--primary-color);
+}
+
+.slick-dots li button:before {
+    color: var(--primary-color);
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
     .toggle-menu {
         display: block;
@@ -304,5 +370,19 @@ footer {
     
     .hero h2 {
         font-size: 1.5rem;
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-slide {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        min-height: 200px;
     }
 }
