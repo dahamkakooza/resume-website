@@ -50,9 +50,40 @@ document.addEventListener('DOMContentLoaded', function() {
         arrows: true
     });
     
+    // Gallery lightbox functionality
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.querySelector('.modal');
+    const modalImg = document.querySelector('.modal-image');
+    const captionText = document.querySelector('.caption-text');
+    const closeBtn = document.querySelector('.close');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            const caption = this.querySelector('.gallery-caption').textContent;
+            
+            modal.style.display = 'block';
+            modalImg.src = imgSrc;
+            captionText.textContent = caption;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
     // Animation on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.skill-category, .project-slide, .experience-item');
+        const elements = document.querySelectorAll('.skill-category, .project-slide, .experience-item, .gallery-item');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -66,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Set initial state for animation
-    document.querySelectorAll('.skill-category, .project-slide, .experience-item').forEach(element => {
+    document.querySelectorAll('.skill-category, .project-slide, .experience-item, .gallery-item').forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.5s, transform 0.5s';
